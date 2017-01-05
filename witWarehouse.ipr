@@ -23,6 +23,9 @@
   <component name="EmacsSettings">
     <option name="emacsPath" value="/usr/bin/emacs" />
   </component>
+  <component name="JavaScriptLibraryMappings">
+    <includedPredefinedLibrary name="ECMAScript 6" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
