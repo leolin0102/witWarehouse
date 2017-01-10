@@ -1,0 +1,26 @@
+{
+  "name": "wit",
+  "version": "1.0.0",
+  "description": "data warhouse management",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leolin0102/witWarehouse.git"
+  },
+  "keywords": [
+    "wit"
+  ],
+  "author": "Leo Lin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leolin0102/witWarehouse/issues"
+  },
+  "homepage": "https://github.com/leolin0102/witWarehouse#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
