@@ -8,3 +8,4 @@ var witApp = ReactDOM.render(
     document.getElementById('root')
 );
 
+witApp.switchPanel('dashboard');

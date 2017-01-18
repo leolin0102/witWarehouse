@@ -4,7 +4,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class DataSourcePanel extends React.Component {
+import TabBar from "../nav/main_view_tabs.js"
+
+export default class DashboardPanel extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -14,20 +16,7 @@ export default class DataSourcePanel extends React.Component {
 
     render() {
         return <div key="dataSourcePanel">
-            <SearchBar/>
-        </div>;
-    }
-}
-
-
-class SearchBar extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return <div className="row">
-
+            <TabBar/>
         </div>;
     }
 }

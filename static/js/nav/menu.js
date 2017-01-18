@@ -12,8 +12,7 @@ export default class menu extends React.Component {
     render() {
         return <div className="col-sm-3 col-md-2 sidebar">
             <ul className="nav nav-sidebar">
-                <li className="active"><a href="#">Dashboard</a></li>
-                <li><a href="#">Data Source</a></li>
+                {this.props.children}
             </ul>
         </div>;
     }

@@ -15,14 +15,24 @@ export default class WitApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {panel: "dataSource"};
+        this.onMenuClick = this.onMenuClick.bind(this);
     }
 
     switchPanel(panel) {
         this.setState({panel: panel});
     }
 
+    onMenuClick(event) {
+        console.log(event.target.name);
+        this.switchPanel(event.target.name);
+    }
+
     sideMenu() {
-        return <Menu key="menu"/>;
+        const panel = this.state.panel;
+        return (<Menu key="menu">
+                    <li onClick={this.onMenuClick} className={panel == "dashboard" ? "active" : ""}><a name="dashboard" href="#">Dashboard</a></li>
+                    <li onClick={this.onMenuClick} className={panel == "dataSource" ? "active" : ""}><a href="#" name="dataSource">Data Source</a></li>
+            </Menu>);
     }
 
     render() {

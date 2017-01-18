@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import DataSourcePanel from "../ds/DataSourcePanel.js"
-
+import DashboardPanel from "../dashboard/DashboardPanel.js"
 export default class AppMainPanel extends React.Component {
     constructor(props) {
         super(props);
@@ -28,5 +28,6 @@ export default class AppMainPanel extends React.Component {
 }
 
 function initPlugins() {
-    return {dataSource: {id: "dataSource", panel: React.createFactory(DataSourcePanel)}};
+    return {dataSource: {id: "dataSource", panel: React.createFactory(DataSourcePanel)},
+            dashboard: {id: "dashboard", panel: React.createFactory(DashboardPanel)}};
 }
