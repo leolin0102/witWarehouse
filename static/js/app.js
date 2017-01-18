@@ -1,9 +1,10 @@
-import AppContainer from './pandora/container/container.js'
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import WitApp from "./wit/WitApp.js"
+
 ReactDOM.render(
-    <AppContainer/>,
+    <WitApp/>,
     document.getElementById('root')
 );
 
