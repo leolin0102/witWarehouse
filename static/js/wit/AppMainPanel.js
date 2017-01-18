@@ -10,29 +10,23 @@ export default class AppMainPanel extends React.Component {
     constructor(props) {
         super(props);
         this.plugins = initPlugins();
-        this.state = {panel: "dataSource"};
-        this.switchPanel = this.switchPanel.bind(this);
-        console.log(props.delegate);
     }
 
     renderPlugin(plugin) {
-        return this.plugins[plugin].panel;
-    }
-
-    switchPanel(panelId) {
-        console.log("switch to: " + panelId);
+        return this.plugins[plugin].panel(null, null);
     }
 
     componentWillMount() {
     }
 
     render() {
+        const panel = this.props.panel;
         return <div key="mainPanel" className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            {this.renderPlugin(this.state.panel)}
+            {this.renderPlugin(panel)}
         </div>;
     }
 }
 
 function initPlugins() {
-    return {dataSource: {id: "dataSource", panel: <DataSourcePanel/>}};
+    return {dataSource: {id: "dataSource", panel: React.createFactory(DataSourcePanel)}};
 }

@@ -25,17 +25,13 @@ export default class WitApp extends React.Component {
         return <Menu key="menu"/>;
     }
 
-    createRow() {
-        var row = (<RowView key="1">
-            {this.sideMenu()}
-            <AppMainPanel panel={this.state.panel} delegate={this}/>
-        </RowView>);
-        return row;
-    }
-
     render() {
-        return <AppContainer>
-            {this.createRow()}
-        </AppContainer>;
+        const panel = this.state.panel;
+        return (<AppContainer>
+            <RowView key="1">
+                {this.sideMenu()}
+                <AppMainPanel panel={panel} delegate={this}/>
+            </RowView>
+        </AppContainer>);
     }
 }
