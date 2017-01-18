@@ -12,7 +12,7 @@ export default class TabBar extends React.Component {
 
     render() {
         return <ul className="nav nav-tabs">
-                    <li role="presentation" className="active"><a href="#">Default</a></li>
+                    <li role="presentation" className="active"><a href="#">Dashboard</a></li>
         </ul>;
     }
 }

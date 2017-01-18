@@ -23,7 +23,6 @@ export default class DataSourcePanel extends React.Component {
         const value = this.state.value;
         return <div key="dataSourcePanel">
             <SearchBar value={value} onChange={this.onSearchChange}/>
-
             <div className="row">
                 <div className="col-xs-6 col-sm-3">
                     <div className="panel panel-default">
