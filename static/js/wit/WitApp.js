@@ -14,6 +14,8 @@ import AppMainPanel from "./AppMainPanel.js"
 export default class WitApp extends React.Component {
     constructor(props) {
         super(props);
+        this.appMainPanel = <AppMainPanel/>
+        this.appMainPanel.switchPanel("a");
     }
 
     sideMenu() {
@@ -24,8 +26,7 @@ export default class WitApp extends React.Component {
         return <AppContainer>
                     <RowView key="1">
                         {this.sideMenu()}
-                        <AppMainPanel>
-                        </AppMainPanel>
+                        {this.appMainPanel}
                     </RowView>
         </AppContainer>;
     }
