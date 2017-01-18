@@ -14,20 +14,28 @@ import AppMainPanel from "./AppMainPanel.js"
 export default class WitApp extends React.Component {
     constructor(props) {
         super(props);
-        this.appMainPanel = <AppMainPanel/>
-        this.appMainPanel.switchPanel("a");
+        this.state = {panel: "dataSource"};
+    }
+
+    switchPanel(panel) {
+        this.setState({panel: panel});
     }
 
     sideMenu() {
         return <Menu key="menu"/>;
     }
 
+    createRow() {
+        var row = (<RowView key="1">
+            {this.sideMenu()}
+            <AppMainPanel panel={this.state.panel} delegate={this}/>
+        </RowView>);
+        return row;
+    }
+
     render() {
         return <AppContainer>
-                    <RowView key="1">
-                        {this.sideMenu()}
-                        {this.appMainPanel}
-                    </RowView>
+            {this.createRow()}
         </AppContainer>;
     }
 }

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import WitApp from "./wit/WitApp.js"
 
-ReactDOM.render(
+var witApp = ReactDOM.render(
     <WitApp/>,
     document.getElementById('root')
 );

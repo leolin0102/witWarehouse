@@ -10,6 +10,9 @@ export default class DataSourcePanel extends React.Component {
         super(props);
     }
 
+    componentWillMount() {
+    }
+
     render() {
         return <div key="dataSourcePanel">
             <TabBar/>

@@ -10,7 +10,9 @@ export default class AppMainPanel extends React.Component {
     constructor(props) {
         super(props);
         this.plugins = initPlugins();
-        this.state = {panel: "dataSource"}
+        this.state = {panel: "dataSource"};
+        this.switchPanel = this.switchPanel.bind(this);
+        console.log(props.delegate);
     }
 
     renderPlugin(plugin) {
@@ -18,7 +20,10 @@ export default class AppMainPanel extends React.Component {
     }
 
     switchPanel(panelId) {
-        console.log("switch to: " +panelId);
+        console.log("switch to: " + panelId);
+    }
+
+    componentWillMount() {
     }
 
     render() {
