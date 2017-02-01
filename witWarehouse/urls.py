@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^wit/', include('wit.urls')),
+    url(r'^meta/', include('meta.urls')),
 ]
