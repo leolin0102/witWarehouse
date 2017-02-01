@@ -27,14 +27,14 @@ export default class DataSourcePanel extends React.Component {
                 <div className="col-xs-6 col-sm-3">
                     <div className="panel panel-default">
                         <div className="panel-body">
-                            Basic panel example
+                            CrashLog
                         </div>
                     </div>
                 </div>
                 <div className="col-xs-6 col-sm-3">
                     <div className="panel panel-default">
                         <div className="panel-body">
-                            Basic panel example
+                            Bugs
                         </div>
                     </div>
                 </div>

@@ -9,3 +9,4 @@ def index(request):
 
     }
     return HttpResponse(template.render(context, request))
+
