@@ -8,3 +8,5 @@ def set_category(request, category_name):
         print 'is get'
     return HttpResponse('yes')
 
+def update_meta_data(request, category_name, datasource, dataset):
+    print request.body
